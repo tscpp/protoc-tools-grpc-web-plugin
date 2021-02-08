@@ -23,7 +23,8 @@ function extension() {
 }
 
 const filename = `protoc-gen-grpc-web-${version()}-${platform()}${extension()}`
-const dest = path.join(__dirname, '../bin', `protoc-gen-grpc-web${extension()}`)
+const destDir = path.join(__dirname, '../bin')
+const dest = path.join(destDir, `protoc-gen-grpc-web${extension()}`)
 
 const headers = { 'User-Agent': 'request module' }
 
@@ -46,6 +47,8 @@ request({
 		encoding: null
 	}, (err, _req, body) => {
 		if (err) throw new Error(`Failed to download (${err})!`)
+
+		fs.mkdirSync(destDir, { recursive: true })
 
 		fs.writeFileSync(dest, body)
 	})
