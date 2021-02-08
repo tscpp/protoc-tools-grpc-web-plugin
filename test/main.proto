@@ -1,0 +1,18 @@
+// Copyright Accility, AB 2020
+// https://github.com/accility/protoc-tools/blob/master/test/protos/simple.proto
+
+syntax = "proto3";
+
+package products;
+
+service Hello {
+  rpc World (HelloWorldRequest) returns (HelloWorldReply) {}
+}
+
+message HelloWorldRequest {
+  string question = 1;
+}
+
+message HelloWorldReply {
+   int32 answer = 1;
+}
