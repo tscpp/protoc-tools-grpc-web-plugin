@@ -4,8 +4,11 @@ import * as path from 'path'
 function plugin(options: plugin.Options): OutputOptions {
 	const binPath = path.join(__dirname, '../bin')
 
-	if (!(process.env.Path && process.env.Path.indexOf(binPath) !== -1))
-		process.env.Path = (process.env.Path ?? '') + `${process.env.Path && !process.env.Path.endsWith(';') ? ';' : ''}${binPath}`
+	const envPathSep = process.platform === 'win32' ? ';' : ':'
+	const envPathName = process.platform === 'win32' ? 'Path' : 'PATH'
+
+	if (!(process.env[envPathName] && process.env[envPathName]?.indexOf(binPath) !== -1))
+		process.env[envPathName] = (process.env[envPathName] ?? '') + `${process.env[envPathName] && !process.env[envPathName]?.endsWith(envPathSep) ? envPathSep : ''}${binPath}`
 
 	return {
 		name: 'grpc-web',
