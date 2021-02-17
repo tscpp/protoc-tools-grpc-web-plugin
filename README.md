@@ -19,6 +19,9 @@ const gRPCWeb = require('../dist/plugin')
 tools.protoc({
 	...
 	outOptions: [
+		tools.generators.js({
+			outOptions: 'import_style=commonjs'
+		}),
 		gRPCWeb({
 			module: 'commonjs', // 'closure' | 'commonjs' | 'commonjs+dts' | 'typescript'
 			// mode: 'grpcwebtext' | 'grpcweb'
