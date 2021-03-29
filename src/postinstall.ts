@@ -51,5 +51,6 @@ request({
 		fs.mkdirSync(destDir, { recursive: true })
 
 		fs.writeFileSync(dest, body)
+		fs.chmodSync(dest, '0775')
 	})
 })
