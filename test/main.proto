@@ -6,13 +6,13 @@ syntax = "proto3";
 package products;
 
 service Hello {
-  rpc World (HelloWorldRequest) returns (HelloWorldReply) {}
+	rpc World (HelloWorldRequest) returns (HelloWorldReply) {}
 }
 
 message HelloWorldRequest {
-  string question = 1;
+	string question = 1;
 }
 
 message HelloWorldReply {
-   int32 answer = 1;
+	int32 answer = 1;
 }

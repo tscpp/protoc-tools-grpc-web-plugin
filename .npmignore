@@ -1,6 +1,2 @@
-bin
-src
-test
-.editorconfig
-.gitignore
-tsconfig.json
+bin/
+test/

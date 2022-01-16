@@ -1,5 +1,5 @@
-import * as tools from '@accility/protoc-tools'
-import * as gRPCWeb from '../dist/plugin'
+const tools = require('@accility/protoc-tools')
+const gRPCWeb = require('..')
 
 tools.protoc({
 	files: [__dirname + '/main.proto'],

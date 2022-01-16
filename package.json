@@ -2,17 +2,13 @@
 	"name": "protoc-tools-grpc-web-plugin",
 	"version": "1.1.4",
 	"description": "Protoc gRPC web generator plugin for @accility/protoc-tools",
-	"main": "dist/plugin.js",
-	"types": "dist/plugin.d.ts",
+	"main": "index.js",
+	"types": "index.d.ts",
 	"scripts": {
-		"build": "tsc",
-		"postinstall": "node ./dist/postinstall.js",
-		"test": "ts-node ./test/test.ts"
+		"postinstall": "node ./postinstall.js 1.3.0",
+		"test": "node ./test/index.js"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/tscpp/protoc-tools-grpc-web-plugin.git"
-	},
+	"repository": "https://github.com/tscpp/protoc-tools-grpc-web-plugin",
 	"keywords": [
 		"@accility/protoc-tools",
 		"protoc-tools",
@@ -22,17 +18,8 @@
 	],
 	"author": "Elias Skogevall",
 	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/tscpp/protoc-tools-grpc-web-plugin/issues"
-	},
-	"homepage": "https://github.com/tscpp/protoc-tools-grpc-web-plugin#readme",
 	"devDependencies": {
-		"@types/node": "^14.14.25",
-		"@types/request": "^2.48.5",
-		"typescript": "^4.1.3"
-	},
-	"dependencies": {
-		"@accility/protoc-tools": "^0.12.0",
-		"request": "^2.88.2"
+		"@accility/protoc-tools": "^0.13.1",
+		"got": "^11.8.3"
 	}
 }
