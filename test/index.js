@@ -2,7 +2,7 @@ const tools = require('@accility/protoc-tools')
 const gRPCWeb = require('..')
 
 tools.protoc({
-	files: [__dirname + '/main.proto'],
+	files: ['main.proto'],
 	includeDirs: [__dirname],
 	outDir: __dirname + '/generated',
 	outOptions: [
