@@ -19,7 +19,7 @@
 	"author": "Elias Skogevall",
 	"license": "MIT",
 	"devDependencies": {
-		"@accility/protoc-tools": "^0.13.1",
+		"@accility/protoc-tools": "^0.14.0",
 		"got": "^11.8.3"
 	}
 }
