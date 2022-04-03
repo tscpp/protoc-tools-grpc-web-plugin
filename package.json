@@ -1,6 +1,6 @@
 {
 	"name": "protoc-tools-grpc-web-plugin",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"description": "Protoc gRPC web generator plugin for @accility/protoc-tools",
 	"main": "index.js",
 	"types": "index.d.ts",
