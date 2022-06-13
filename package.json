@@ -4,6 +4,11 @@
 	"description": "Protoc gRPC web generator plugin for @accility/protoc-tools",
 	"main": "index.js",
 	"types": "index.d.ts",
+	"files": [
+		"index.js",
+		"index.d.ts",
+		"install.mjs"
+	],
 	"scripts": {
 		"postinstall": "node ./install.mjs",
 		"test": "node ./test/index.js"
