@@ -118,7 +118,7 @@ async function get_input_version() {
     if (process.env.PROTOC_GEN_GRPC_WEB_VERSION)
         return process.env.PROTOC_GEN_GRPC_WEB_VERSION;
 
-    const pkg = await find_package(process.cwd());
+    const pkg = await find_package(process.env.INIT_CWD ?? process.cwd());
     if (pkg?.config?.["protoc-gen-grpc-web-version"])
         return pkg.config["protoc-gen-grpc-web-version"];
 
